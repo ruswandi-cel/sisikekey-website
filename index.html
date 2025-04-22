@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sisikekey - Toko Online</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <h1>Sisikekey</h1>
+    <nav>
+      <ul>
+        <li><a href="#Beranda">Beranda</a></li>
+        <li><a href="#produk">Produk</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+        <li><a href="#keranjang">Keranjang</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section id="hero">
+    <h2>Panci Presto & Alat Rumah Tangga Berkualitas</h2>
+    <p>Belanja mudah, aman, dan terpercaya di Sisikekey.</p>
+  </section>
+  <section id="produk">
+    <h2>Produk Kami</h2>
+    <div class="keranjang-header">
+  <button onclick="toggleKeranjang()" class="keranjang-btn">Lihat Keranjang</button>
+  <span id="jumlah-item">(0)</span>
+</div>
+    <!-- Contoh produk -->
+    <div class="produk-container">
+      <div class="produk">
+        <div class="produk-card" data-aos="fade-up" data-aos-duration="800">
+    <img src="WhatsApp Image 2025-04-10 at 22.35.13.jpeg" alt="Panci Presto">
+    <h3>Panci Presto 20L</h3>
+    <div class="rating">
+  ★★★★★
+</div>
+    <p class="harga">Rp599.000</p>
+    <p class="stok">Stok: <span id="stok-presto">1000</span> pcs</p>
+    <div class="deskripsi">
+      <p>UKURAN BESAR — Panci berkapasitas 20 liter dilengkapi katup pengaman (pluit presto) & sarangan untuk mengukus. Bonus buku resep!</p>
+      <span class="baca-selengkapnya">Baca selengkapnya</span>
+      <div class="deskripsi-lengkap" style="display: none;">
+        <p>Memasak lebih cepat, menghasilkan masakan daging yang empuk & lunak. Mudah digunakan dan praktis.</p>
+        <p>Material: Stainless steel berkualitas tinggi. Hemat tenaga dengan sistem pengatur tekanan & panas yang aman dan efisien.</p>
+      </div>
+    </div>
+    <a href="https://wa.me/6281410445695?text=Halo%20Kak%20Sisikekey%2C%20saya%20mau%20pesan%20produk%20berikut%3A%0A%0ANama%20Produk%3A%20Panci%20Presto%2020%20Liter%0AJumlah%3A%201%0ANama%20Pembeli%3A%20[Nama%20Lengkap]%0AAlamat%20Lengkap%3A%20[Alamat%20Lengkap]%0ANomor%20HP%3A%20[Nomor%20Aktif]%0AMetode%20Pengiriman%3A%20JNE%2FJ%26T%2FSiCepat%2FAnter%20Aja%2C%20Pos%20Indonesia%0ACatatan%3A%20-%0A%0AMohon%20info%20total%20biaya%20%2B%20ongkir%20ya%20kak." 
+   target="_blank" 
+   style="display:inline-block; padding:10px 20px; background-color:#25D366; color:white; text-decoration:none; border-radius:5px; font-weight:bold;">
+   Pesan via WhatsApp
+</a>
+  </div>
+</div>
+
+
+
+<div class="produk">
+    <div class="produk-card" data-aos="fade-up" data-aos-duration="800">
+  <img src="printer mini.jpg" alt="Printer Thermal Mini Bluetooth">
+  <h3>Printer Thermal Mini Bluetooth</h3>
+  <div class="rating">
+  ★★★★★
+</div>
+  <p class="harga">Rp450.000</p>
+  <p class="stok">Stok: <span id="stok-presto">1000</span> pcs</p>
+  <div class="deskripsi">
+    <p class="short-desc">
+    Printer thermal mini portable dengan fungsi Bluetooth dan baterai 1500mAh.Ringan dan mudah dibawa.
+  </p>
+  <div class="full-desc" style="display: none;">
+        <p>
+          Printer thermal mini portable dengan koneksi Bluetooth dan baterai 1500mAh. Ringan dan mudah dibawa, cocok untuk usaha online, kasir, dan pengiriman barang.
+        </p>
+    <ul>
+      <li>Ukuran kertas: 58mm</li>
+      <li>Bluetooth 4.0, isi ulang baterai 1500mAh</li>
+      <li>Kecepatan cetak: 50 - 89.9mm/s</li>
+      <li>Dukungan barcode: QR Code, PDF417, EAN, CODE128 dll</li>
+      <li>Waktu charging: 2-4 jam | Standby: 100 jam | Pemakaian: 3 hari</li>
+      <li>Kompabilitas: ESC/POS, konektor USB & power jack</li>
+    </ul>
+    </div>
+      <a href="#" class="toggle-desc" onclick="toggleDesc(this); return false;">Baca Selengkapnya</a>
+    </div>
+  <a href="https://wa.me/6281410445695?text=Halo%20Kak%20Sisikekey%2C%20saya%20mau%20pesan%20produk%20berikut%3A%0A%0ANama%20Produk%3A%20Printer%20Thermal%20Mini%20Bluetooth%0AJumlah%3A%201%0ANama%20Pembeli%3A%20[Nama%20Lengkap]%0AAlamat%20Lengkap%3A%20[Alamat%20Lengkap]%0ANomor%20HP%3A%20[Nomor%20Aktif]%0AMetode%20Pengiriman%3A%20JNE%2FJ%26T%2FSiCepat%2FAnter%20Aja%2C%20Pos%20Indonesia%0ACatatan%3A%20-%0A%0AMohon%20info%20total%20biaya%20%2B%20ongkir%20ya%20kak." 
+   target="_blank" 
+   style="display:inline-block; padding:10px 20px; background-color:#25D366; color:white; text-decoration:none; border-radius:5px; font-weight:bold;">
+   Pesan via WhatsApp
+</a>
+</div>
+</div>
+
+
+
+<div class="produk">
+  <div class="produk-card" data-aos="fade-up" data-aos-duration="800">
+    <img src="panggangan.jpg" alt="Panggangan Lipat Anti Lengket">
+    <h3>Panggangan Lipat Anti Lengket</h3>
+    <div class="rating">
+  ★★★★★
+</div>
+    <p class="harga">Rp600.000</p>
+    <p class="stok">Stok: <span id="stok-presto">1000</span> pcs</p>
+    <div class="deskripsi">
+      <p class="short-desc">
+        Panggangan lipat anti lengket, desain elegan & mudah dibawa.
+      </p>
+      <div class="full-desc" style="display: none;">
+        <ul>
+          <li>Interior anti lengket dan mudah dibersihkan</li>
+          <li>Ukuran lebar, bisa menampung makanan lebih banyak</li>
+          <li>Kaki-kaki bisa dilepas, cocok digunakan sambil duduk</li>
+          <li>Besar dan panjang, bisa bakar langsung banyak</li>
+          <li>Desain elegan, mudah dilipat & dibawa kemana saja</li>
+          <li><strong>Note:</strong> Tidak termasuk aksesoris, tempat bumbu, dan wadah makanan. Hanya panggangan saja!</li>
+        </ul>
+      </div>
+      <a href="#" class="toggle-desc" onclick="toggleDesc(this); return false;">Baca Selengkapnya</a>
+    </div>
+    <a href="https://wa.me/6281410445695?text=Halo%20Kak%20Sisikekey%2C%20saya%20mau%20pesan%20produk%20berikut%3A%0A%0ANama%20Produk%3A%20Panggangan%20Lipat%20Anti%20Lengket%0AJumlah%3A%201%0ANama%20Pembeli%3A%20[Nama%20Lengkap]%0AAlamat%20Lengkap%3A%20[Alamat%20Lengkap]%0ANomor%20HP%3A%20[Nomor%20Aktif]%0AMetode%20Pengiriman%3A%20JNE%2FJ%26T%2FSiCepat%2FAnter%20Aja%2C%20Pos%20Indonesia%0ACatatan%3A%20-%0A%0AMohon%20info%20total%20biaya%20%2B%20ongkir%20ya%20kak." 
+   target="_blank" 
+   style="display:inline-block; padding:10px 20px; background-color:#25D366; color:white; text-decoration:none; border-radius:5px; font-weight:bold;">
+   Pesan via WhatsApp
+</a>
+  </div>
+</div>
+
+
+<div class="produk">
+  <div class="produk-card" data-aos="fade-up" data-aos-duration="800">
+    <img src="panggangan panci.jpg" alt="Panggangan dan Panci Elektrik 2 in 1">
+    <h3>Panggangan & Panci Elektrik 2 in 1</h3>
+    <div class="rating">
+  ★★★★★
+</div>
+    <p class="harga">Rp500.000</p>
+    <p class="stok">Stok: <span id="stok-presto">1000</span> pcs</p>
+    <div class="deskripsi">
+      <p class="short-desc">
+        Alat multifungsi untuk BBQ, hotpot & goreng — cocok buat keluarga!
+      </p>
+      <div class="full-desc" style="display: none;">
+        <ul>
+          <li>2 in 1 Grill + Pan — bisa panggang dan rebus sekaligus</li>
+          <li>Cepat panas, hanya 5 menit siap digunakan</li>
+          <li>Terbuat dari batu Maifan Jerman yang aman untuk makanan</li>
+          <li>Paduan aluminium berkualitas tinggi, tahan lama</li>
+          <li>Tutup kaca transparan & pegangan anti-slip</li>
+          <li>Lapisan anti lengket, sedikit minyak, dan asap</li>
+          <li>Filter oli efisiensi tinggi & mudah dibersihkan</li>
+          <li>Kapasitas besar, cocok untuk acara keluarga</li>
+          <li><strong>Sertifikasi:</strong> CCC & SGS (setara FDA)</li>
+        </ul>
+      </div>
+      <a href="#" class="toggle-desc" onclick="toggleDesc(this); return false;">Baca Selengkapnya</a>
+    </div>
+    <a href="https://wa.me/6281410445695?text=Halo%20Kak%20Sisikekey%2C%20saya%20mau%20pesan%20produk%20berikut%3A%0A%0ANama%20Produk%3A%20Panggangan%20%26%20Panci%20Elektrik%202%20in%201%0AJumlah%3A%201%0ANama%20Pembeli%3A%20[Nama%20Lengkap]%0AAlamat%20Lengkap%3A%20[Alamat%20Lengkap]%0ANomor%20HP%3A%20[Nomor%20Aktif]%0AMetode%20Pengiriman%3A%20JNE%2FJ%26T%2FSiCepat%2FAnter%20Aja%2C%20Pos%20Indonesia%0ACatatan%3A%20-%0A%0AMohon%20info%20total%20biaya%20%2B%20ongkir%20ya%20kak."
+   target="_blank" 
+   style="display:inline-block; padding:10px 20px; background-color:#25D366; color:white; text-decoration:none; border-radius:5px; font-weight:bold;">
+   Pesan via WhatsApp
+</a>
+  </div>
+</div>
+
+
+<div class="produk">
+  <div class="produk-card" data-aos="fade-up" data-aos-duration="800">
+    <img src="oven.jpeg" alt="Breakfast Machine 3 in 1">
+    <h3>Breakfast Machine 3 in 1</h3>
+    <div class="rating">
+  ★★★★★
+</div>
+    <p class="harga">Rp855.000</p>
+    <p class="stok">Stok: <span id="stok-presto">1000</span> pcs</p>
+    <div class="deskripsi">
+      <p class="short-desc">
+        Mesin sarapan praktis 3 in 1 — kopi, toaster, dan grill pan jadi satu!
+      </p>
+      <div class="full-desc" style="display: none;">
+        <ul>
+          <li>Toaster oven + mesin kopi + grill pan dalam 1 alat</li>
+          <li>Double heating tube untuk pemanasan merata</li>
+          <li>Kapasitas oven besar (9 liter)</li>
+          <li>Pot kopi 600 mL — cukup untuk 4-5 gelas kopi</li>
+          <li>Praktis untuk pagi hari yang sibuk</li>
+          <li>Bahan stainless steel — tahan lama & elegan</li>
+          <li>Oven: 900W | Kopi: 600W | Suhu: 100–230°C</li>
+          <li>Ukuran: 45 × 18 × 21 cm</li>
+          <li><strong>Paket Termasuk:</strong> Loyang, rak, wajan, dan teko kopi</li>
+        </ul>
+      </div>
+      <a href="#" class="toggle-desc" onclick="toggleDesc(this); return false;">Baca Selengkapnya</a>
+    </div>
+   <a href="https://wa.me/6281410445695?text=Halo%20Kak%20Sisikekey%2C%20saya%20mau%20pesan%20produk%20berikut%3A%0A%0ANama%20Produk%3A%20Breakfast%20Machine%203%20in%201%0AJumlah%3A%201%0ANama%20Pembeli%3A%20[Nama%20Lengkap]%0AAlamat%20Lengkap%3A%20[Alamat%20Lengkap]%0ANomor%20HP%3A%20[Nomor%20Aktif]%0AMetode%20Pengiriman%3A%20JNE%2FJ%26T%2FSiCepat%2FAnter%20Aja%2C%20Pos%20Indonesia%0ACatatan%3A%20-%0A%0AMohon%20info%20total%20biaya%20%2B%20ongkir%20ya%20kak." 
+   target="_blank" 
+   style="display:inline-block; padding:10px 20px; background-color:#25D366; color:white; text-decoration:none; border-radius:5px; font-weight:bold;">
+   Pesan via WhatsApp
+</a>
+  </div>
+</div>
+
+
+<div class="produk">
+  <div class="produk-card" data-aos="fade-up" data-aos-duration="800">
+    <img src="cetakan-egg-waffle.jpg" alt="Cetakan Egg Waffle">
+    <h3>Cetakan Egg Waffle</h3>
+    <div class="rating">
+  ★★★★★
+</div>
+    <p class="harga">Rp300.000</p>
+    <p class="stok">Stok: <span id="stok-presto">1000</span> pcs</p>
+    <div class="deskripsi">
+      <p class="short-desc">
+        Cetakan waffle anti lengket, bikin jajanan mall jadi lebih hemat di rumah!
+      </p>
+      <div class="full-desc" style="display: none;">
+        <p>
+          Cetakan kue egg waffle untuk kamu yang ingin bikin jajanan hits ala mall sendiri di rumah! Bentuk bulat unik dan teksturnya crispy lembut bikin semua ketagihan!
+        </p>
+        <ul>
+          <li>Diameter total: 18 cm</li>
+          <li>Jumlah lubang: 30 lubang</li>
+          <li>Anti lengket, mudah dibersihkan</li>
+          <li>Material kuat & tahan panas</li>
+          <li>Model gagang dikirim random (magnet / cantelan)</li>
+          <li>Cocok untuk cemilan anak, pasangan, dan keluarga</li>
+          <li>Bisa dipakai di kompor gas</li>
+        </ul>
+      </div>
+      <a href="#" class="toggle-desc" onclick="toggleDesc(this); return false;">Baca Selengkapnya</a>
+    </div>
+    <a href="https://wa.me/6281410445695?text=Halo%20Kak%20Sisikekey%2C%20saya%20mau%20pesan%20produk%20berikut%3A%0A%0ANama%20Produk%3A%20Cetakan%20Egg%20Waffle%0AJumlah%3A%201%0ANama%20Pembeli%3A%20[Nama%20Lengkap]%0AAlamat%20Lengkap%3A%20[Alamat%20Lengkap]%0ANomor%20HP%3A%20[Nomor%20Aktif]%0AMetode%20Pengiriman%3A%20JNE%2FJ%26T%2FSiCepat%2FAnter%20Aja%2C%20Pos%20Indonesia%0ACatatan%3A%20-%0A%0AMohon%20info%20total%20biaya%20%2B%20ongkir%20ya%20kak." 
+   target="_blank" 
+   style="display:inline-block; padding:10px 20px; background-color:#25D366; color:white; text-decoration:none; border-radius:5px; font-weight:bold;">
+   Pesan via WhatsApp
+</a>
+  </div>
+</div>
+
+
+<div class="produk">
+  <div class="produk-card" data-aos="fade-up" data-aos-duration="800">
+    <img src="cetakan-taiyaki.jpg" alt="Cetakan Kue Taiyaki Pancake Maker">
+    <h3>Cetakan Kue Taiyaki</h3>
+    <div class="rating">
+  ★★★★★
+</div>
+    <p class="harga">Rp300.000</p>
+    <p class="stok">Stok: <span id="stok-presto">1000</span> pcs</p>
+    <div class="deskripsi">
+      <p class="short-desc">
+        Cetakan kue ikan khas Jepang, cocok untuk cemilan lucu anak-anak!
+      </p>
+      <div class="full-desc" style="display: none;">
+        <p>
+          Buat cemilan sehat dan lucu di rumah bareng keluarga! Cetakan kue Taiyaki ini punya bentuk ikan khas Jepang yang disukai anak-anak dan dewasa. Anti lengket dan gampang dibersihkan!
+        </p>
+        <ul>
+          <li>Hasilkan 2 ikan lucu dalam 1 cetakan</li>
+          <li>Material: Aluminium alloy dengan lapisan anti lengket</li>
+          <li>Cocok untuk taiyaki, fish pancake, bungeoppang, dll</li>
+          <li>Tidak butuh listrik atau oven – cukup gunakan kompor biasa</li>
+          <li>Mudah dipakai dan dibersihkan</li>
+          <li>Tinggi cetakan: 3,5 cm</li>
+        </ul>
+      </div>
+      <a href="#" class="toggle-desc" onclick="toggleDesc(this); return false;">Baca Selengkapnya</a>
+    </div>
+    <a href="https://wa.me/6281410445695?text=Halo%20Kak%20Sisikekey%2C%20saya%20mau%20pesan%20produk%20berikut%3A%0A%0ANama%20Produk%3A%20Cetakan%20Kue%20Taiyaki%0AJumlah%3A%201%0ANama%20Pembeli%3A%20[Nama%20Lengkap]%0AAlamat%20Lengkap%3A%20[Alamat%20Lengkap]%0ANomor%20HP%3A%20[Nomor%20Aktif]%0AMetode%20Pengiriman%3A%20JNE%2FJ%26T%2FSiCepat%2FAnter%20Aja%2C%20Pos%20Indonesia%0ACatatan%3A%20-%0A%0AMohon%20info%20total%20biaya%20%2B%20ongkir%20ya%20kak." 
+   target="_blank" 
+   style="display:inline-block; padding:10px 20px; background-color:#25D366; color:white; text-decoration:none; border-radius:5px; font-weight:bold;">
+   Pesan via WhatsApp
+</a>
+  </div>
+</div>
+
+
+<div class="produk">
+  <div class="produk-card" data-aos="fade-up" data-aos-duration="800">
+    <img src="cetakan semprong.jpg" alt="Cetakan Kue Semprong">
+    <h3>Cetakan Kue Semprong / Egg Roll Maker</h3>
+    <div class="rating">
+  ★★★★★
+</div>
+    <p class="harga">Rp275.000</p>
+    <p class="stok">Stok: <span id="stok-presto">1000</span> pcs</p>
+    <div class="deskripsi">
+      <p class="short-desc">
+        Cetakan kue semprong berbahan anti lengket, cocok untuk camilan rumahan.
+      </p>
+      <div class="full-desc" style="display: none;">
+        <p>
+          Cetakan kue semprong atau egg roll maker terbuat dari bahan aluminium teflon yang tidak lengket dan dilengkapi dengan pegangan plastik berkualitas. Diameter 17 cm, cocok untuk membuat cemilan renyah di rumah.
+        </p>
+        <ul>
+          <li>Material: Aluminium teflon anti lengket</li>
+          <li>Diameter: 17 cm</li>
+          <li>Handle plastik kuat dan nyaman digenggam</li>
+          <li>Bisa digunakan di atas kompor biasa</li>
+          <li>Cocok untuk membuat egg roll, semprong, dan sejenisnya</li>
+        </ul>
+      </div>
+      <a href="#" class="toggle-desc" onclick="toggleDesc(this); return false;">Baca Selengkapnya</a>
+    </div>
+    <a href="https://wa.me/6281410445695?text=Halo%20Kak%20Sisikekey%2C%20saya%20mau%20pesan%20produk%20berikut%3A%0A%0ANama%20Produk%3A%20Cetakan%20Kue%20Semprong%20%2F%20Egg%20Roll%20Maker%0AJumlah%3A%201%0ANama%20Pembeli%3A%20[Nama%20Lengkap]%0AAlamat%20Lengkap%3A%20[Alamat%20Lengkap]%0ANomor%20HP%3A%20[Nomor%20Aktif]%0AMetode%20Pengiriman%3A%20JNE%2FJ%26T%2FSiCepat%2FAnter%20Aja%2C%20Pos%20Indonesia%0ACatatan%3A%20-%0A%0AMohon%20info%20total%20biaya%20%2B%20ongkir%20ya%20kak." 
+   target="_blank" 
+   style="display:inline-block; padding:10px 20px; background-color:#25D366; color:white; text-decoration:none; border-radius:5px; font-weight:bold;">
+   Pesan via WhatsApp
+</a>
+  </div>
+</div>
+
+
+<div class="produk">
+  <div class="produk-card" data-aos="fade-up" data-aos-duration="800">
+    <img src="air fryer.jpg" alt="Air Fryer Penggorengan Sehat">
+    <h3>Air Fryer Penggorengan Sehat tanpa Minyak</h3>
+    <div class="rating">
+  ★★★★★
+</div>
+    <p class="harga">Rp750.000</p>
+    <p class="stok">Stok: <span id="stok-presto">1000</span> pcs</p>
+    <div class="deskripsi">
+      <p class="short-desc">
+        Air fryer untuk gaya hidup sehat — goreng tanpa minyak dan lebih praktis.
+      </p>
+      <div class="full-desc" style="display: none;">
+        <p>
+          Paling laris dan banyak dicari untuk pola hidup sehat. Air fryer ini memungkinkan Anda menggoreng makanan favorit tanpa minyak atau hanya sedikit minyak. Cocok untuk gaya hidup modern yang praktis dan sehat.
+        </p>
+        <ul>
+          <li>Kapasitas: 4,5 L</li>
+          <li>Ukuran: 27 cm x 30 cm</li>
+          <li>Komponen aman untuk mesin cuci piring</li>
+          <li>Teknologi TurboStar untuk menggoreng lebih sehat</li>
+          <li>Keranjang QuickClean anti lengket</li>
+          <li>Free Bubble Wrap + Buku Panduan</li>
+          <li>Dikirim warna sesuai stok</li>
+        </ul>
+      </div>
+      <a href="#" class="toggle-desc" onclick="toggleDesc(this); return false;">Baca Selengkapnya</a>
+    </div>
+    <a href="https://wa.me/6281410445695?text=Halo%20Kak%20Sisikekey%2C%20saya%20mau%20pesan%20produk%20berikut%3A%0A%0ANama%20Produk%3A%20Air%20Fryer%20Penggorengan%20Sehat%20tanpa%20Minyak%0AJumlah%3A%201%0ANama%20Pembeli%3A%20[Nama%20Lengkap]%0AAlamat%20Lengkap%3A%20[Alamat%20Lengkap]%0ANomor%20HP%3A%20[Nomor%20Aktif]%0AMetode%20Pengiriman%3A%20JNE%2FJ%26T%2FSiCepat%2FAnter%20Aja%2C%20Pos%20Indonesia%0ACatatan%3A%20-%0A%0AMohon%20info%20total%20biaya%20%2B%20ongkir%20ya%20kak." 
+   target="_blank" 
+   style="display:inline-block; padding:10px 20px; background-color:#25D366; color:white; text-decoration:none; border-radius:5px; font-weight:bold;">
+   Pesan via WhatsApp
+</a>
+  </div>
+</div>
+
+
+
+<div class="produk">
+<div class="produk-card" data-aos="fade-up" data-aos-duration="800">
+  <img src="yogurt maker.jpeg" alt="Yogurt Maker">
+  <h3>Yogurt Maker - Pembuat Yogurt Praktis di Rumah</h3>
+  <div class="rating">
+  ★★★★★
+</div>
+  <p class="harga">Rp160.000</p>
+  <p class="stok">Stok: <span id="stok-presto">1000</span> pcs</p>
+  <div class="deskripsi">
+    <p class="short-desc">
+      Bikin yogurt sendiri di rumah? Mudah! Alat ini solusinya.
+    </p>
+    <div class="full-desc" style="display: none;">
+      <p>
+        Siapa yang gemar menyantap yogurt? Cemilan ini digemari anak-anak sampai orang dewasa. Kini Anda bisa membuat yogurt sendiri di rumah dengan alat ini. Dalam 8 - 9 jam, susu akan berubah menjadi yogurt lezat.
+      </p>
+      <ul>
+        <li>Yogurt Maker — bikin yogurt sendiri jadi lebih hemat dan sehat</li>
+        <li>Kapasitas 1 Liter — cukup untuk keluarga</li>
+        <li>Satu Tombol Operasi — super mudah digunakan</li>
+        <li>Cocok untuk gaya hidup sehat dan praktis</li>
+      </ul>
+    </div>
+    <a href="#" class="toggle-desc" onclick="toggleDesc(this); return false;">Baca Selengkapnya</a>
+  </div>
+  <a href="https://wa.me/6281410445695?text=Halo%20Kak%20Sisikekey%2C%20saya%20mau%20pesan%20produk%20berikut%3A%0A%0ANama%20Produk%3A%20Yogurt%20Maker%20-%20Pembuat%20Yogurt%20Praktis%20di%20Rumah%0AJumlah%3A%201%0ANama%20Pembeli%3A%20[Nama%20Lengkap]%0AAlamat%20Lengkap%3A%20[Alamat%20Lengkap]%0ANomor%20HP%3A%20[Nomor%20Aktif]%0AMetode%20Pengiriman%3A%20JNE%2FJ%26T%2FSiCepat%2FAnter%20Aja%2C%20Pos%20Indonesia%0ACatatan%3A%20-%0A%0AMohon%20info%20total%20biaya%20%2B%20ongkir%20ya%20kak." 
+   target="_blank" 
+   style="display:inline-block; padding:10px 20px; background-color:#25D366; color:white; text-decoration:none; border-radius:5px; font-weight:bold;">
+   Pesan via WhatsApp
+</a>
+</div>
+</div>
+
+
+<div class="produk">
+<div class="produk-card" data-aos="fade-up" data-aos-duration="800">
+  <img src="baking pan.jpg" alt="Cetakan Kue Bolu Tanpa Oven">
+  <h3>Baking Pan - Cetakan Kue Bolu Anti Lengket (Tanpa Oven)</h3>
+  <div class="rating">
+  ★★★★★
+</div>
+  <p class="harga">Rp300.000</p>
+  <p class="stok">Stok: <span id="stok-presto">1000</span> pcs</p>
+  <div class="deskripsi">
+    <p class="short-desc">
+      Cetakan bolu anti lengket, bisa bikin kue tanpa oven langsung di atas kompor!
+    </p>
+    <div class="full-desc" style="display: none;">
+      <p>
+        Anda ingin membuat bolu dengan mudah? Kami menyediakan alat pembuat bolu yang praktis dan cocok untuk dapur kesayangan Anda. Hanya dengan kompor, Anda sudah bisa bikin kue bolu sendiri tanpa oven!
+      </p>
+      <ul>
+        <li>Bahan: Aluminium & Teflon (Anti Lengket)</li>
+        <li>Mudah digunakan, cocok untuk pemula</li>
+        <li>1 Set terdiri dari 1 pcs baking pan</li>
+        <li>Diameter: 28 cm</li>
+        <li>Cocok untuk semua jenis kompor</li>
+      </ul>
+    </div>
+    <a href="#" class="toggle-desc" onclick="toggleDesc(this); return false;">Baca Selengkapnya</a>
+  </div>
+ <a href="https://wa.me/6281410445695?text=Halo%20Kak%20Sisikekey%2C%20saya%20mau%20pesan%20produk%20berikut%3A%0A%0ANama%20Produk%3A%20Baking%20Pan%20-%20Cetakan%20Kue%20Bolu%20Anti%20Lengket%20%28Tanpa%20Oven%29%0AJumlah%3A%201%0ANama%20Pembeli%3A%20[Nama%20Lengkap]%0AAlamat%20Lengkap%3A%20[Alamat%20Lengkap]%0ANomor%20HP%3A%20[Nomor%20Aktif]%0AMetode%20Pengiriman%3A%20JNE%2FJ%26T%2FSiCepat%2FAnter%20Aja%2C%20Pos%20Indonesia%0ACatatan%3A%20-%0A%0AMohon%20info%20total%20biaya%20%2B%20ongkir%20ya%20kak." 
+   target="_blank" 
+   style="display:inline-block; padding:10px 20px; background-color:#25D366; color:white; text-decoration:none; border-radius:5px; font-weight:bold;">
+   Pesan via WhatsApp
+</a>
+</div>
+</div>
+
+
+
+<div class="produk">
+<div class="produk-card" data-aos="fade-up" data-aos-duration="800">
+  <img src="sandwich toaster.jpg" alt="Sandwich Toaster Ala Sultan">
+  <h3>Sandwich Toaster Ala Sultan</h3>
+  <div class="rating">
+  ★★★★★
+</div>
+  <p class="harga">Rp295.000</p>
+  <p class="stok">Stok: <span id="stok-presto">1000</span> pcs</p>
+  <div class="deskripsi">
+    <p class="short-desc">
+      Toaster elegan dengan fitur auto centering dan warmer terintegrasi — siap bikin pagi kamu lebih nikmat!
+    </p>
+    <div class="full-desc" style="display: none;">
+      <p>
+        Sarapan adalah waktu makan yang paling penting. Apa cara yang lebih baik untuk memulai pagi Anda dari sepotong roti panggang dan secangkir kopi? Toaster ini adalah jawaban untuk semua kebutuhan memanggang Anda! Nikmati roti yang sempurna berkat fitur auto centering untuk hasil maksimal.
+      </p>
+      <ul>
+        <li><strong>Fitur Warmer Terintegrasi:</strong> Menghangatkan roti dengan cepat dan sehat.</li>
+        <li><strong>Mudah Dibersihkan:</strong> Dilengkapi baki remah untuk menangkap sisa roti.</li>
+        <li>Baki bisa dilap atau dicuci, super praktis!</li>
+      </ul>
+    </div>
+    <a href="#" class="toggle-desc" onclick="toggleDesc(this); return false;">Baca Selengkapnya</a>
+  </div>
+  <a href="https://wa.me/6281410445695?text=Halo%20Kak%20Sisikekey%2C%20saya%20mau%20pesan%20produk%20berikut%3A%0A%0ANama%20Produk%3A%20Sandwich%20Toaster%20Ala%20Sultan%0AJumlah%3A%201%0ANama%20Pembeli%3A%20[Nama%20Lengkap]%0AAlamat%20Lengkap%3A%20[Alamat%20Lengkap]%0ANomor%20HP%3A%20[Nomor%20Aktif]%0AMetode%20Pengiriman%3A%20JNE%2FJ%26T%2FSiCepat%2FAnter%20Aja%2C%20Pos%20Indonesia%0ACatatan%3A%20-%0A%0AMohon%20info%20total%20biaya%20%2B%20ongkir%20ya%20kak." 
+   target="_blank" 
+   style="display:inline-block; padding:10px 20px; background-color:#25D366; color:white; text-decoration:none; border-radius:5px; font-weight:bold;">
+   Pesan via WhatsApp
+</a>
+</div>
+</div>
+
+    <!-- Tambahkan produk lain di sini -->
+  </section>
+
+
+  <div id="keranjang" class="keranjang-container" style="display: none;">
+  <h3>Keranjang Belanja</h3>
+  <ul id="daftar-keranjang"></ul>
+  <button onclick="kosongkanKeranjang()">Kosongkan Keranjang</button>
+</div>
+
+<!-- Popup Keranjang -->
+<div id="popupKeranjang" class="popup-keranjang" style="display: none;">
+  <div class="popup-content">
+    <h3>Keranjang Belanja</h3>
+    <ul id="daftarKeranjang"></ul>
+    <button onclick="tutupKeranjang()">Tutup</button>
+  </div>
+</div>
+
+<section id="kontak">
+  <h2>Kontak Kami</h2>
+  <p>
+    <i class="fab fa-whatsapp"></i> WhatsApp: <a href="https://wa.me/6281410445695" target="_blank">0814-1044-5695</a><br>
+    <i class="fas fa-store"></i> Shopee: <a href="https://shopee.co.id/sisikekey" target="_blank">sisikekey</a><br>
+    <i class="fab fa-tiktok"></i> TikTok: <a href="https://www.tiktok.com/@sisikekey6" target="_blank">@sisikekey6</a>
+  </p>
+</section>
+  <footer>
+    <p>&copy; 2013 Sisikekey - All rights reserved.</p>
+  </footer>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+<script src="script.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const tombolSelengkapnya = document.querySelectorAll(".baca-selengkapnya");
+
+    tombolSelengkapnya.forEach(function (tombol) {
+      tombol.addEventListener("click", function () {
+        const deskripsiLengkap = this.nextElementSibling;
+        deskripsiLengkap.classList.toggle("hidden");
+
+        // Ubah teks tombol jika ingin
+        this.textContent = deskripsiLengkap.classList.contains("hidden")
+          ? "Baca selengkapnya"
+          : "Tutup";
+      });
+    });
+  });
+</script>
+ <script>
+    function toggleDesc(element) {
+      const fullDesc = element.parentElement.querySelector('.full-desc');
+      if (fullDesc.style.display === "none" || fullDesc.style.display === "") {
+        fullDesc.style.display = "block";
+        element.textContent = "Sembunyikan";
+      } else {
+        fullDesc.style.display = "none";
+        element.textContent = "Baca Selengkapnya";
+      }
+    }
+  </script>
+  <script>
+  function toggleDesc(el) {
+    const fullDesc = el.previousElementSibling;
+    const isVisible = fullDesc.style.display === "block";
+
+    fullDesc.style.display = isVisible ? "none" : "block";
+    el.textContent = isVisible ? "Baca Selengkapnya" : "Tutup";
+  }
+</script>
+<script>
+  // Fungsi untuk toggle tampilan keranjang
+  function toggleKeranjang() {
+    const keranjang = document.getElementById("keranjang");
+    keranjang.style.display = keranjang.style.display === "none" ? "block" : "none";
+    tampilkanKeranjang();
+  }
+
+  // Fungsi tambah ke keranjang
+  const tombolKeranjang = document.querySelectorAll(".btn-keranjang, button");
+
+  tombolKeranjang.forEach(btn => {
+    btn.addEventListener("click", function () {
+      const card = this.closest(".produk-card");
+      const namaProduk = card.querySelector("h3").innerText;
+      const harga = card.querySelector(".harga").innerText;
+
+      let keranjang = JSON.parse(localStorage.getItem("keranjang")) || [];
+      keranjang.push({ namaProduk, harga });
+      localStorage.setItem("keranjang", JSON.stringify(keranjang));
+      updateJumlahItem();
+    });
+  });
+
+  function tampilkanKeranjang() {
+    const list = document.getElementById("daftar-keranjang");
+    const keranjang = JSON.parse(localStorage.getItem("keranjang")) || [];
+    list.innerHTML = "";
+    keranjang.forEach(item => {
+      const li = document.createElement("li");
+      li.innerText = ${item.namaProduk} - ${item.harga};
+      list.appendChild(li);
+    });
+  }
+
+  function kosongkanKeranjang() {
+    localStorage.removeItem("keranjang");
+    tampilkanKeranjang();
+    updateJumlahItem();
+  }
+
+  function updateJumlahItem() {
+    const keranjang = JSON.parse(localStorage.getItem("keranjang")) || [];
+    document.getElementById("jumlah-item").innerText = (${keranjang.length});
+  }
+
+  // Update jumlah saat halaman pertama kali dibuka
+  updateJumlahItem();
+</script>
+<script>
+  const keranjang = [];
+
+  function tambahKeKeranjang(namaProduk, hargaProduk) {
+    keranjang.push({ nama: namaProduk, harga: hargaProduk });
+    alert(namaProduk + " berhasil ditambahkan ke keranjang!");
+  }
+
+  function bukaKeranjang() {
+    const daftar = document.getElementById("daftarKeranjang");
+    daftar.innerHTML = "";
+    keranjang.forEach((item, index) => {
+      const li = document.createElement("li");
+      li.textContent = ${item.nama} - ${item.harga};
+      daftar.appendChild(li);
+    });
+    document.getElementById("popupKeranjang").style.display = "block";
+  }
+
+  function tutupKeranjang() {
+    document.getElementById("popupKeranjang").style.display = "none";
+  }
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const tombolBaca = document.querySelectorAll('.baca-selengkapnya');
+    tombolBaca.forEach(function (tombol) {
+      tombol.addEventListener('click', function () {
+        const deskripsiLengkap = this.nextElementSibling;
+        if (deskripsiLengkap.style.display === 'block') {
+          deskripsiLengkap.style.display = 'none';
+          this.textContent = 'Baca selengkapnya';
+        } else {
+          deskripsiLengkap.style.display = 'block';
+          this.textContent = 'Tutup deskripsi';
+        }
+      });
+    });
+  });
+</script>
+</body>
+</html>
